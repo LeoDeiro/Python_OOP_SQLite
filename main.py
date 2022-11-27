@@ -21,3 +21,16 @@ pessoas = pessoaDAO.getAll(True)
 
 for pessoa in pessoas:
   print(pessoa)
+  
+#Criar um objeto com qualquer ator/atriz/diretor/diretora
+novo = input("Informe o nome do ator/atriz: ")  
+novo = Pessoa(0, novo)
+
+#Olha que simples...
+novo = pessoaDAO.save(novo)
+print(5*"-"+"*Pessoa Adicionada*"+5*"-")
+pessoas = pessoaDAO.getAll()
+
+for pessoa in pessoas:
+  print(pessoa)
+  
